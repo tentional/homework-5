@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/style.css ">
+   <link rel="stylesheet" href="./js/script.js">
+   <title>Завдання 10</title>
+</head>
+<body>
+   <script>
+      //Задача 10. Знайти суму всіх непарних чисел, що знаходяться між заданими користувачем числами.
+      let userFirstNum = parseInt(prompt("Введіть перше число діапазону"))
+      let userSecondNum = parseInt(prompt("Введіть друге число діапазону"))
+      let oddSum = 0
+      for (let i = userFirstNum; i <= userSecondNum; i++) {
+        if (i % 2 !== 0) oddSum += i
+      }
+      alert(`Сума всіх непарних чисел в діапозоні від ${userFirstNum} до ${userSecondNum}(включно) складає ${oddSum}`)
+   </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/style.css ">
+   <title>Завдання -2</title>
+</head>
+<body>
+   <script>
+      //Задача - 2. Поступово генерувати 100 випадкових чисел від 1 до 1000. Підрахувати яких чисел більше: парних чи непарних.
+        let evenNumbers = 0
+        let oddNumbers = 0
+        for (let rendNum = 1; rendNum <= 100; rendNum++) {
+            let num = 1 + Math.floor(Math.random() * 1000)
+            if (num % 2 === 0)
+                evenNumbers++
+            else oddNumbers++
+        }
+        document.write(`Парні: ${evenNumbers}<br><br>Непарні: ${oddNumbers}<br><br>`)
+        if (evenNumbers > oddNumbers) {
+                document.write("Більше парних чисел")
+            } else if (oddNumbers > evenNumbers)
+            document.write("Більше непарних чисел")
+            else document.write("Рівні")
+   </script>
+</body>
+</html>

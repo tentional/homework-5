@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/style.css ">
+   <title>Завдання 14</title>
+</head>
+<body>
+   <script>
+      //14. Каса. Користувачу повідомляють суму, яку йому треба сплатити. Користувач поступово вводить суму грошей до тих пір, поки суми не буде достатньо для оплати товарів (кожного разу користувачу повідомляють, яку ще суму потрібно ввести). 
+
+      const maxAmount = 10000
+      const minAmount = 1
+      let sumToPay = Math.floor(Math.random() * (maxAmount - minAmount + 1))
+      let userSum
+      do {
+        userSum = parseInt(
+          prompt(
+            `Введіть суму грошей, які ви хочете сплатити. Вам треба сплатити: ${sumToPay}грн`
+          )
+        )
+        sumToPay -= userSum
+      } while (sumToPay !== 0 && sumToPay > 0)
+      alert("Дякую, ви все сплатили!")
+   </script>
+</body>
+</html>
